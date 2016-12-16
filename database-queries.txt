@@ -1,0 +1,233 @@
+TP53, BRCA1, HRAS, EGFR, BRAF, FGFR2, KDM6A, MTOR, MAP3K
+
+db.bladdercancer.find({$text: {$search: "\"acc-83\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"acc-83\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"acc-83\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'acc-83', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'acc-83', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'acc-83', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"braf\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"braf\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"braf\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'braf', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'braf', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'braf', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"brca1\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"brca1\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"brca1\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'brca1', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'brca1', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'brca1', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"brca2\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"brca2\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"brca2\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'brca2', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'brca2', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'brca2', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"ecv304\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"ecv304\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"ecv304\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'ecv304', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'ecv304', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'ecv304', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"egfr\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"egfr\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"egfr\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'egfr', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'egfr', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'egfr', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"fgfr2\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"fgfr2\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"fgfr2\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'fgfr2', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'fgfr2', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'fgfr2', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"hras\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"hras\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"hras\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'hras', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'hras', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'hras', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"hsv-tk\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"hsv-tk\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"hsv-tk\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'hsv-tk', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'hsv-tk', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'hsv-tk', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"kdm6a\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"kdm6a\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"kdm6a\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'kdm6a', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'kdm6a', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'kdm6a', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"ki-67\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"ki-67\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"ki-67\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'ki-67', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'ki-67', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'ki-67', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"kras\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"kras\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"kras\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'kras', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'kras', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'kras', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"l858r\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"l858r\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"l858r\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'l858r', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'l858r', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'l858r', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"map3k\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"map3k\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"map3k\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'map3k', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'map3k', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'map3k', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"mia paca-2\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"mia paca-2\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"mia paca-2\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'mia paca-2', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'mia paca-2', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'mia paca-2', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"mtor\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"mtor\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"mtor\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'mtor', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'mtor', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'mtor', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"p53\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"p53\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"p53\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'p53', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'p53', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'p53', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"rt112\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"rt112\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"rt112\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'rt112', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'rt112', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'rt112', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"tp53\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"tp53\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"tp53\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'tp53', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'tp53', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'tp53', 1) > 0;
+
+db.bladdercancer.find({$text: {$search: "\"ugt1\""}}).explain("executionStats");
+db.lungcancer.find({$text: {$search: "\"ugt1\""}}).explain("executionStats");
+db.pancreaticcancer.find({$text: {$search: "\"ugt1\""}}).explain("executionStats");
+select count(*) from  "Blddr Art" 
+where contains(abstract, 'ugt1', 1) > 0;
+select count(*) from  "Lng Art" 
+where contains(abstract, 'ugt1', 1) > 0;
+select count(*) from  "Pncrtc Art" 
+where contains(abstract, 'ugt1', 1) > 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

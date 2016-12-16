@@ -1,0 +1,84 @@
+datatype limits: http://docs.oracle.com/cd/B28359_01/server.111/b28320/limits001.htm#i287903
+
+******************TABLE SIZE SQL COMMAND*****************
+select owner, table_name, round((num_rows*avg_row_len)/(1024*1024)) MB 
+from all_tables 
+where owner not like 'SYS%'
+and num_rows > 0
+order by MB desc;
+
+
+**********user permissions needed***********************
+CREATE USER lanaebk IDENTIFIED BY <password>;
+
+GRANT RESOURCE, CONNECT, CTXAPP TO lanaebk;
+
+GRANT EXECUTE ON CTXSYS.CTX_CLS TO lanaebk;
+GRANT EXECUTE ON CTXSYS.CTX_DDL TO lanaebk;
+GRANT EXECUTE ON CTXSYS.CTX_DOC TO lanaebk;
+GRANT EXECUTE ON CTXSYS.CTX_OUTPUT TO lanaebk;
+GRANT EXECUTE ON CTXSYS.CTX_QUERY TO lanaebk;
+GRANT EXECUTE ON CTXSYS.CTX_REPORT TO lanaebk;
+GRANT EXECUTE ON CTXSYS.CTX_THES TO lanaebk;
+GRANT EXECUTE ON CTXSYS.CTX_ULEXER TO lanaebk;
+
+ORA-01653: unable to extend table LANAEBK.Pncrtc Art by 128 in tablespace SYSTEM
+
+SELECT FILE_NAME, BYTES FROM DBA_DATA_FILES WHERE TABLESPACE_NAME = 'SYSTEM';
+
+ALTER DATABASE DATAFILE 'C:\ORACLEXE\APP\ORACLE\ORADATA\XE\SYSTEM.DBF'
+AUTOEXTEND ON NEXT 1M MAXSIZE 1024M;
+
+begin
+ctx_ddl.create_preference('mylex', 'basic_lexer');
+ctx_ddl.set_attribute('mylex', 'printjoins', '-');
+end;
+
+************CONTEXT INDEX***************************
+create index bldindex on lanaebk."Blddr Art"(abstract)
+indextype is ctxsys.context
+parameters('lexer mylex');
+
+create index lngindex on lanaebk."Lng Art"(abstract)
+indextype is ctxsys.context
+parameters('lexer mylex');
+
+create index pncindex on lanaebk."Pncrtc Art"(abstract)
+indextype is ctxsys.context
+parameters('lexer mylex');
+
+
+**************CTXCAT INDEX***************************
+begin
+ctx_ddl.create_index_set('bldart_iset');
+ctx_ddl.add_index('bldart_iset','abstract');
+end;
+begin
+ctx_ddl.create_index_set('pncart_iset');
+ctx_ddl.add_index('pncart_iset','abstract');
+end;
+begin
+ctx_ddl.create_index_set('lngart_iset');
+ctx_ddl.add_index('lngart_iset','abstract');
+end;
+CREATE INDEX lanaebk.bldindex ON lanaebk."Blddr Art"(abstract) 
+INDEXTYPE IS ctxsys.ctxcat PARAMETERS 
+('index set bldart_iset lexer mylex');
+CREATE INDEX lngindex ON lanaebk."Lng Art"(abstract) 
+INDEXTYPE IS CTXCAT PARAMETERS 
+('index set lngart_iset', 'lexer mylex');
+CREATE INDEX pncindex ON lanaebk."Pncrtc Art"(abstract) 
+INDEXTYPE IS CTXCAT PARAMETERS 
+('index set pncart_iset', 'lexer mylex');
+
+
+****************CTXRULE INDEX************************
+CREATE INDEX bldindex ON lanaebk."Blddr Art"(abstract) 
+INDEXTYPE IS ctxsys.ctxrule
+PARAMETERS ('lexer mylex');
+CREATE INDEX lngindex ON lanaebk."Lng Art"(abstract) 
+INDEXTYPE IS ctxsys.ctxrule
+PARAMETERS ('lexer mylex');
+CREATE INDEX pncindex ON lanaebk."Pncrtc Art"(abstract) 
+INDEXTYPE IS ctxsys.ctxrule
+PARAMETERS ('lexer mylex');

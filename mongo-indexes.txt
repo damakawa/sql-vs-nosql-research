@@ -1,0 +1,3 @@
+db.bladdercancer.createIndex( { abstract: "text" } )
+db.lungcancer.createIndex( { abstract: "text" } )
+db.pancreaticcancer.createIndex( { abstract: "text" } )
